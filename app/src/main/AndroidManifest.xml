@@ -9,13 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotionLayout_NguyenVanHung_18079021">
-        <activity android:name=".MotionLayout"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MusicMotion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MotionLayout" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
