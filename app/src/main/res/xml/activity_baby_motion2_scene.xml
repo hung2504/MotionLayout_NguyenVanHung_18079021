@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/widget" />
+        <Constraint
+            app:layout_editor_absoluteY="64dp"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="88dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView2" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="68dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imgCam" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="116dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imgVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="68dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="116dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imgMic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="68dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="68dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/widget" />
+        <Constraint
+            android:layout_width="57dp"
+            android:layout_height="56dp"
+            android:id="@+id/imgCam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="176dp"
+            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintTop_toTopOf="@+id/imgVideo" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="116dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="116dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/imgMic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="176dp"
+            app:layout_constraintTop_toTopOf="@+id/imgVideo" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/imgVideo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="180dp"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatar"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="68dp" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+        <OnClick app:targetId="@+id/imgMusic" />
+        <KeyFrameSet >
+            <KeyPosition
+                app:motionTarget="@+id/imgCam"
+                app:framePosition="30"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.2"
+                app:percentY="0.65" />
+            <KeyPosition
+                app:motionTarget="@+id/imgVideo"
+                app:framePosition="30"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.497"
+                app:percentY="0.643" />
+            <KeyPosition
+                app:motionTarget="@+id/imgMic"
+                app:framePosition="30"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.8"
+                app:percentY="0.65" />
+        </KeyFrameSet>
+        <OnClick app:targetId="@+id/imageView10" />
+    </Transition>
+</MotionScene>
